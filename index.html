@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="images/favicon.ico" rel="icon" />
+    <title>Health Compensation Calc</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.min.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Main -->
+    <section class="main">
+      <div class="container">
+        <!-- Content-box -->
+        <section class="content-box">
+          <div class="wrapper">
+            <!-- Promo  -->
+            <div class="promo">
+              <!-- <div class="container"> -->
+              <div class="promo__inner">
+                <div class="promo__title">Health Insurance Compensation</div>
+                <p class="promo__text">
+                  Your employer pays the compensation from the 4th to the 8th
+                  day of sick-leave.
+                  <span class="first">The Estonian Health Insurance Fund</span>
+                  pays only from the 9th day. The compensation rate is 70% of
+                  your monthly gross income. The maximum duration of one
+                  insurance event is 182 days, unless it’s tuberculosis. For
+                  tuberculosis it is up to 240 days.
+                </p>
+              </div>
+              <!-- </div> -->
+            </div>
+            <!-- End Promo -->
+
+            <!-- Services -->
+            <div class="services">
+              <div class="services__inner">
+                <h2 class="services__title">Acceptance criteria</h2>
+                <p class="services__text">
+                  As a user, you can to calculate your sick-leave health
+                  insurance compensation so that you can double check your
+                  compensation sum.
+                </p>
+              </div>
+              <div class="services__img">
+                <img
+                  class="services__img"
+                  alt="services"
+                  src="images/health-calc.jpg"
+                />
+              </div>
+            </div>
+
+            <div class="services-list">
+              <div class="list1">
+                <ul>
+                  <li>enter monthly gross income</li>
+                  <li>enter total days of sick-leave</li>
+                  <li>specify that you have tubercolosis</li>
+                  <li>your compensation details:</li>
+                </ul>
+              </div>
+              <div class="list2">
+                <ul id="list">
+                  <li>-how much will employer compensate</li>
+                  <li>-how many days employer has to compensate</li>
+                  <li>-how much will Health Insurance compensate</li>
+                  <li>-how much will Health Insurance has to compensate</li>
+                  <li>-how much your compensation total will be</li>
+                </ul>
+              </div>
+              <!-- <div class="list3">
+                <ul>
+                  <li>*</li>
+                  <li>**</li>
+                </ul>
+              </div> -->
+            </div>
+            <!-- End Services -->
+          </div>
+        </section>
+        <!-- End Content-box -->
+
+        <!-- Calc -->
+        <section class="calc-box">
+          <div class="wrapper">
+            <div class="calc-box__date">
+              <h3>Compensation Calculator</h3>
+              <p class="input">
+                <label>Average income</label>
+                <input
+                  class="value color text"
+                  type="number"
+                  name="quantity"
+                  min="1"
+                  id="income"
+                  placeholder="0 €"
+                />
+              </p>
+              <p class="input">
+                <label>Days on sick-leave</label>
+                <input
+                  class="value color"
+                  type="number"
+                  name="quantity"
+                  min="1"
+                  max="182"
+                  id="days"
+                  placeholder="0 days"
+                />
+              </p>
+              <p class="chbox">
+                <input
+                  class="chbox_btn color"
+                  type="checkbox"
+                  label="checkbox"
+                  id="chbox"
+                />
+                <label class="ch-text"> I have tubercolosis</label>
+              </p>
+
+              <button class="btn calc-box__btn" id="calc">Calculate</button>
+            </div>
+            <hr />
+            <div class="compensations">
+              <div class="employer">
+                <p class="comp-text">The employer compensates</p>
+                <p class="comp-text__bold">
+                  <span id="employerDays" class="ExD" value="0"> 0 </span> days
+                </p>
+                <p class="bold"><span id="sumEmp" class="ExS"> 0</span> €</p>
+                <p class="sub">
+                  Daily allowance <br />
+                  <span id="perDay" class="PD" value="0"> 0 </span> eur
+                </p>
+              </div>
+
+              <div class="insurance">
+                <p class="comp-text">Health Insurance compensates</p>
+                <p class="comp-text__bold">
+                  <span id="insuranceDays" class="InD" value="0"> 0 </span> days
+                </p>
+                <p class="bold"><span id="sumIns" class="InS"> 0</span> €</p>
+                <p class="sub">
+                  Daily allowance <br />
+                  <span id="perDayIn" class="PDI" value="0"> 0 </span> eur
+                </p>
+              </div>
+            </div>
+            <hr />
+            <div class="total">
+              <p class="total__text">
+                Compensation total for
+                <span class="totalDays" value="0">0</span> days (net)
+              </p>
+              <p class="title"><span id="totalSum">0</span> EUR</p>
+            </div>
+          </div>
+        </section>
+        <!-- End Calc  -->
+      </div>
+    </section>
+    <!-- End Main -->
+
+    <script src="script.js"></script>
+  </body>
+</html>
